@@ -1,0 +1,666 @@
+{
+	"info": {
+		"_postman_id": "3b484d9a-e21a-4b99-a218-fcfca174d7b3",
+		"name": "shopping cart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14230173"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url.dev22}}/:connector/:businesscaseId/customers/login",
+							"host": [
+								"{{url.dev22}}"
+							],
+							"path": [
+								":connector",
+								":businesscaseId",
+								"customers",
+								"login"
+							],
+							"variable": [
+								{
+									"key": "connector",
+									"value": "{{connector}}"
+								},
+								{
+									"key": "businesscaseId",
+									"value": "{{bcId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "singup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url.dev22}}/:connector/:businesscaseId/customers/signup",
+							"host": [
+								"{{url.dev22}}"
+							],
+							"path": [
+								":connector",
+								":businesscaseId",
+								"customers",
+								"signup"
+							],
+							"variable": [
+								{
+									"key": "connector",
+									"value": "{{connector}}"
+								},
+								{
+									"key": "businesscaseId",
+									"value": "{{bcId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "availabilitu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/cart/:chatSessionId/availability",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						"cart",
+						":chatSessionId",
+						"availability"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						},
+						{
+							"key": "chatSessionId",
+							"value": "{{chatSessionId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cart-creation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/cart",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						"cart"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chatsessionUpdate",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/cart/:chatSessionId",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						"cart",
+						":chatSessionId"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						},
+						{
+							"key": "chatSessionId",
+							"value": "{{chatSessionId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customerCart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/cart/:sessionId",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						"cart",
+						":sessionId"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						},
+						{
+							"key": "sessionId",
+							"value": "{{sessionId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ordercreation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/order",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						"order"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orderProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/orders/:orderId/products",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						"orders",
+						":orderId",
+						"products"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						},
+						{
+							"key": "orderId",
+							"value": "{{orderId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProcessPayment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/cart/:chatSessionId/payment/:orderId",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						"cart",
+						":chatSessionId",
+						"payment",
+						":orderId"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						},
+						{
+							"key": "chatSessionId",
+							"value": "{{chatSessionId}}"
+						},
+						{
+							"key": "orderId",
+							"value": "{{orderId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productPreset/Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/presets",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						"presets"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productPreset/Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/presets",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						"presets"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productPreset/Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/presets/:id",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						"presets",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						},
+						{
+							"key": "id",
+							"value": "{{id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productTemplate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/product-templates",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						"product-templates"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shippingMethod",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/orders/:orderId/shipping",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						"orders",
+						":orderId",
+						"shipping"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						},
+						{
+							"key": "orderId",
+							"value": "{{orderId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shopProduct/Get",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/products",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						"products"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shopProduct2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/:productSet/products",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						":productSet",
+						"products"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						},
+						{
+							"key": "productSet",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shopProductSet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/product-sets",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						"product-sets"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storeCartds",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url.dev22}}/:connector/:businesscaseId/cart/:chatSessionId/cards/:orderId",
+					"host": [
+						"{{url.dev22}}"
+					],
+					"path": [
+						":connector",
+						":businesscaseId",
+						"cart",
+						":chatSessionId",
+						"cards",
+						":orderId"
+					],
+					"variable": [
+						{
+							"key": "connector",
+							"value": "{{connector}}"
+						},
+						{
+							"key": "businesscaseId",
+							"value": "{{bcId}}"
+						},
+						{
+							"key": "chatSessionId",
+							"value": "{{chatSessionId}}"
+						},
+						{
+							"key": "orderId",
+							"value": "{{orderId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url.local",
+			"value": "https://docker.cobrowser.io/",
+			"type": "string"
+		},
+		{
+			"key": "connector",
+			"value": "facebook",
+			"type": "string"
+		},
+		{
+			"key": "bcId",
+			"value": "636a28d0c6f8df1df80d3ca6",
+			"type": "string"
+		},
+		{
+			"key": "sessionId",
+			"value": "636e0d78af661410c6539057",
+			"type": "string"
+		},
+		{
+			"key": "chatSessionId",
+			"value": "636e0d78af661410c6539057",
+			"type": "string"
+		},
+		{
+			"key": "productId",
+			"value": "34534",
+			"type": "string"
+		},
+		{
+			"key": "id",
+			"value": "345434",
+			"type": "string"
+		},
+		{
+			"key": "orderId",
+			"value": "4545",
+			"type": "string"
+		},
+		{
+			"key": "url.dev22",
+			"value": "https://dev22.cobrowser.io/shopping",
+			"type": "string"
+		}
+	]
+}

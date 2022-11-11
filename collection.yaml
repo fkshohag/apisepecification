@@ -1,0 +1,517 @@
+openapi: 3.0.0
+info:
+  title: shopping cart
+  version: 1.0.0
+servers:
+  - url: http://{{url.dev22}}
+tags:
+  - name: customer
+paths:
+  /{connector}/{businesscaseId}/customers/login:
+    post:
+      tags:
+        - customer
+      summary: login
+      requestBody:
+        content: {}
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/customers/signup:
+    post:
+      tags:
+        - customer
+      summary: singup
+      requestBody:
+        content: {}
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/cart/{chatSessionId}/availability:
+    post:
+      tags:
+        - default
+      summary: availabilitu
+      requestBody:
+        content: {}
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+        - name: chatSessionId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{chatSessionId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/cart:
+    post:
+      tags:
+        - default
+      summary: cart-creation
+      requestBody:
+        content: {}
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/cart/{chatSessionId}:
+    patch:
+      tags:
+        - default
+      summary: chatsessionUpdate
+      requestBody:
+        content: {}
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+        - name: chatSessionId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{chatSessionId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/cart/{sessionId}:
+    post:
+      tags:
+        - default
+      summary: customerCart
+      requestBody:
+        content: {}
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+        - name: sessionId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{sessionId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/order:
+    post:
+      tags:
+        - default
+      summary: ordercreation
+      requestBody:
+        content: {}
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/orders/{orderId}/products:
+    post:
+      tags:
+        - default
+      summary: orderProduct
+      requestBody:
+        content: {}
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+        - name: orderId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{orderId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/cart/{chatSessionId}/payment/{orderId}:
+    post:
+      tags:
+        - default
+      summary: ProcessPayment
+      requestBody:
+        content: {}
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+        - name: chatSessionId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{chatSessionId}}'
+        - name: orderId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{orderId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/presets:
+    get:
+      tags:
+        - default
+      summary: productPreset/Get
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - default
+      summary: productPreset/Post
+      requestBody:
+        content: {}
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/presets/{id}:
+    delete:
+      tags:
+        - default
+      summary: productPreset/Delete
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{id}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/product-templates:
+    get:
+      tags:
+        - default
+      summary: productTemplate
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/orders/{orderId}/shipping:
+    post:
+      tags:
+        - default
+      summary: shippingMethod
+      requestBody:
+        content: {}
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+        - name: orderId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{orderId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/products:
+    post:
+      tags:
+        - default
+      summary: shopProduct/Get
+      requestBody:
+        content: {}
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/{productSet}/products:
+    post:
+      tags:
+        - default
+      summary: shopProduct2
+      requestBody:
+        content: {}
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+        - name: productSet
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/product-sets:
+    post:
+      tags:
+        - default
+      summary: shopProductSet
+      requestBody:
+        content: {}
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /{connector}/{businesscaseId}/cart/{chatSessionId}/cards/{orderId}:
+    post:
+      tags:
+        - default
+      summary: storeCartds
+      requestBody:
+        content: {}
+      parameters:
+        - name: connector
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{connector}}'
+        - name: businesscaseId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{bcId}}'
+        - name: chatSessionId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{chatSessionId}}'
+        - name: orderId
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{orderId}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
